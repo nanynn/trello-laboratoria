@@ -1,16 +1,29 @@
+function mostrarDatos(){
+//en construccion
+}
+
+
 function aparecer(){
 	var contenido= document.getElementById('contenido');
-	
 	var boton = document.createElement('button');
+	var botonSalida = document.createElement('button');
+	var respuesta = document.createElement('div');
+	
 	var espacio = document.createElement('input');
 	document.createElement('input').value = "";
-	var respuesta = document.createElement('div');
+	var datos = document.createTextNode(espacio);
 
-
-	espacio.placeholder +='Añadir una lista...'
 	boton.innerHTML = 'Guardar';
-
-	contenido.appendChild(espacio);
-	contenido.appendChild(boton);
+	botonSalida.innerHTML += '<i class="fa fa-times" aria-hidden="true"></i>';
+	espacio.placeholder +='Añadir una lista...'
 	
+
+	contenido.appendChild(respuesta);
+	respuesta.appendChild(espacio);
+	respuesta.appendChild(boton);
+	respuesta.appendChild(botonSalida);
+	
+	espacio.appendChild(datos);
+
+	//espacio.addEventListener('click')
 } 
