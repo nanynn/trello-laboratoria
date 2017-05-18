@@ -1,6 +1,8 @@
-function mostrarDatos(){
-//en construccion
+var mostrarDatos = function(){
+	this.childNodes.innerHTML = "";
 }
+//en construccion
+
 
 
 function aparecer(){
@@ -9,7 +11,7 @@ function aparecer(){
 	var botonSalida = document.createElement('button');
 	var respuesta = document.createElement('div');
 	
-	var espacio = document.createElement('input');
+	var espacio = document.createElement('input');//.value;
 	document.createElement('input').value = "";
 	var datos = document.createTextNode(espacio);
 
@@ -25,5 +27,5 @@ function aparecer(){
 	
 	espacio.appendChild(datos);
 
-	//espacio.addEventListener('click')
+	espacio.addEventListener('click', mostrarDatos);
 } 
